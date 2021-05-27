@@ -1,0 +1,764 @@
+<div class="container-fluid">
+  <div class="row justify-content-around mb-2">
+    <div class="col-9 mt-4" id="btnToggle">
+      <button
+        mat-flat-button
+        class="text-muted bt btn-outline-warning"
+        [matMenuTriggerFor]="menu"
+      >
+        <a style="font-size: 25px">
+          <i class="fa fa-building text-muted"></i>
+        </a>
+      </button>
+      <mat-menu #menu="matMenu"> </mat-menu>
+      <button
+        [matMenuTriggerFor]="menu2"
+        mat-flat-button
+        class="text-muted bt btn-outline-warning"
+      >
+        <mat-icon class="text-muted" style="font-size: 25px"
+          >settings_input_component</mat-icon
+        >
+      </button>
+      <mat-menu #menu2="matMenu"> </mat-menu>
+      <button
+        [matMenuTriggerFor]="menu3"
+        mat-flat-button
+        class="text-muted bt btn-outline-warning"
+      >
+        <a style="font-size: 25px">
+          <i class="fa fa-rocket text-muted"></i>
+        </a>
+        <!-- <mat-icon >domain</mat-icon> -->
+      </button>
+      <mat-menu #menu3="matMenu"> </mat-menu>
+    </div>
+    <div class="col-3">
+      <div class="row mt-3">
+        <div class="col-3 mt-2">
+          <button
+            mat-flat-button
+            class="text-muted btn-outline-warning"
+            checked
+          >
+            Today
+          </button>
+        </div>
+        <div class="col-3 mt-2">
+          <button mat-flat-button class="text-muted btn-outline-warning">
+            Yesterday
+          </button>
+        </div>
+        <div class="col-3 mt-2">
+          <button mat-flat-button class="text-muted btn-outline-warning">
+            Last Week
+          </button>
+        </div>
+        <div class="col-3">
+          <!-- <mat-form-field
+                  style="
+                  visibility: hidden;
+                  height: 0;
+                  width: 0;"
+                  class="example-full-width"
+                  appearance="fill"
+                >
+                  <mat-label>Choose a date</mat-label>
+                  <mat-date-range-input  [formGroup]="range" [rangePicker]="picker">
+                    <input matStartDate formControlName="start" placeholder="Start date">
+                    <input matEndDate formControlName="end" placeholder="End date" >
+                  </mat-date-range-input>
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-date-range-picker   #picker></mat-date-range-picker>
+
+                </mat-form-field>
+ -->
+          <mat-icon type="button" class="text-muted" style="font-size: 25px"
+            >today</mat-icon
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="container-fluid"
+  style="background-color: rgb(235, 245, 235); padding-top: 50px"
+>
+  <div class="container-fluid">
+    <div class="row justify-content-between">
+      <div class="col-7">
+        <h2
+          style="
+            color: #003f5c;
+            font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
+          "
+        >
+          Resource \ Materials \ Time Line
+        </h2>
+      </div>
+      <div class="col">
+        <div class="row">
+          <div class="col-4">
+            <button
+              mat-raised-button
+              style="
+                width: 160px;
+                background-color: #2d62ed;
+                color: white;
+                font: normal normal medium 14px/18px Montserrat;
+              "
+            >
+              <mat-icon style="font-size: 20px">add</mat-icon> ADD NEW
+            </button>
+          </div>
+          <div class="col-8">
+            <div class="input-group">
+              <span
+                class="input-group-text"
+                id="basic-addon1"
+                style="color: #000; background-color: #ffffff"
+                ><mat-icon>search</mat-icon></span
+              >
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search by Material Name - Type"
+                aria-label="Search by Material Name - Type"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-8">
+      <div class="row">
+        <div class="col-4">
+          <mat-card
+            class="example-card shadow p-3 mb-5 bg-white rounded"
+            style="height: 365px"
+          >
+            <mat-card-header>
+              <div class="row">
+                <div class="col-4">
+                  <img src="../../assets/imgs/Material.svg" />
+                </div>
+                <div class="col-8 mt-1">
+                  <mat-card-title>Material Consumption</mat-card-title>
+                </div>
+              </div>
+            </mat-card-header>
+            <hr />
+            <mat-card-content class="mt-5">
+              <div class="row justify-content-center">
+                <div class="col-6">
+                  <h1>5,000 KM</h1>
+                  <h4>Actual Production</h4>
+                </div>
+                <div class="col-6">
+                  <h1>7,000 KM</h1>
+                  <h4>Planned Production</h4>
+                </div>
+              </div>
+              <br />
+              <div class="row">
+                <div class="col-8">
+                  <br />
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 75%"
+                      aria-valuenow="75"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <div class="col-4 mt-2">
+                  <h1>75%</h1>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-8">
+          <mat-card
+            class="example-card shadow p-3 mb-5 bg-white rounded"
+            style="height: 365px"
+          >
+            <mat-card-header>
+              <div class="row">
+                <div class="col-4">
+                  <img src="../../assets/imgs/pereformance.svg" />
+                </div>
+                <div class="col-8 mt-1">
+                  <mat-card-title>Material Supply Vs Demand</mat-card-title>
+                </div>
+              </div>
+            </mat-card-header>
+
+            <mat-card-content>
+              <hr />
+              <div class="row justify-content-center">
+                <!-- <div id="chart">
+                        <apx-chart
+                        [series]="barChart.series"
+                        [chart]="barChart.chart"
+                        [dataLabels]="barChart.dataLabels"
+                        [plotOptions]="barChart.plotOptions"
+                        [yaxis]="barChart.yaxis"
+                        [legend]="barChart.legend"
+                        [fill]="barChart.fill"
+                        [stroke]="barChart.stroke"
+                        [tooltip]="barChart.tooltip"
+                        [xaxis]="barChart.xaxis"
+                        [grid]="barChart.grid"
+                      ></apx-chart>
+                      </div> -->
+                <div echarts [options]="option" class="demo-chart"></div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <mat-card
+            class="example-card shadow p-3 mb-5 bg-white rounded"
+            style="height: 600px"
+          >
+            <div class="row">
+              <div class="col-8">
+                <mat-card-header>
+                  <div class="row">
+                    <div class="col-4">
+                      <img src="../../assets/imgs/Material.svg" />
+                    </div>
+                    <div class="col-8 mt-1">
+                      <mat-card-title>Material Supplier Records</mat-card-title>
+                    </div>
+                  </div>
+                </mat-card-header>
+              </div>
+              <div class="col-4">
+                <mat-tab-group
+                  mat-stretch-tabs
+                  (selectedTabChange)="changeTab($event)"
+                >
+                  <mat-tab label="Material List"> </mat-tab>
+                  <mat-tab label="Material Profile"> </mat-tab>
+                </mat-tab-group>
+              </div>
+            </div>
+            <mat-card-content>
+              <div
+                id="chart"
+                *ngIf="matListRender == true && matProfileRender == false"
+              >
+                <table
+                  class="table"
+                  style="
+                    color: #707070;
+                    font: normal normal bold 12px/14px Montserrat;
+                  "
+                >
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">Material Type</th>
+                      <th scope="col">Current Weight</th>
+                      <th scope="col">Last Change</th>
+                      <th scope="col">Last Oder Date Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <span class="material-icons" style="color: #ca4e82">
+                          fiber_manual_record
+                        </span>
+                      </th>
+                      <td>Aluminum</td>
+                      <td>1000</td>
+                      <td>+100</td>
+                      <td>9:00 | 3-29-2021</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="material-icons" style="color: #ec5967">
+                          fiber_manual_record
+                        </span>
+                      </th>
+                      <td>Sulphat</td>
+                      <td>1000</td>
+                      <td>+100</td>
+                      <td>9:00 | 3-29-2021</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="material-icons" style="color: #00d3be">
+                          fiber_manual_record
+                        </span>
+                      </th>
+                      <td>Cardon</td>
+                      <td>1000</td>
+                      <td>+100</td>
+                      <td>9:00 | 3-29-2021</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="material-icons" style="color: #634f8d">
+                          fiber_manual_record
+                        </span>
+                      </th>
+                      <td>Material Name</td>
+                      <td>1000</td>
+                      <td>+100</td>
+                      <td>9:00 | 3-29-2021</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="material-icons" style="color: #994f90">
+                          fiber_manual_record
+                        </span>
+                      </th>
+                      <td>Material Name</td>
+                      <td>1000</td>
+                      <td>+100</td>
+                      <td>9:00 | 3-29-2021</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="material-icons" style="color: #00d1de">
+                          fiber_manual_record
+                        </span>
+                      </th>
+                      <td>Material Name</td>
+                      <td>1000</td>
+                      <td>+100</td>
+                      <td>9:00 | 3-29-2021</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                id="chart"
+                *ngIf="matListRender == false && matProfileRender == true"
+              ></div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="row">
+        <mat-card class="example-card shadow bg-white rounded">
+          <mat-card-header>
+            <div class="row">
+              <div class="col-4">
+                <span class="material-icons" style="color: red">
+                  fiber_manual_record
+                </span>
+              </div>
+              <div class="col-2 mt-1">
+                <mat-card-title style="color: red"> ALERTS</mat-card-title>
+              </div>
+            </div>
+          </mat-card-header>
+          <mat-card-content
+            class="container-fluid"
+            style="overflow-y: scroll; max-height: 390px"
+          >
+            <hr />
+            <div class="row justify-content-around">
+              <div class="col-2">
+                <img
+                  src="../../assets/imgs/Resources.svg"
+                  style="width: 55px; opacity: 0.5"
+                />
+              </div>
+              <div class="col-8">
+                <h1>Confirm mass on machine</h1>
+                <div class="row justify-content-around">
+                  <div class="col">
+                    <h1>ID</h1>
+                  </div>
+                  <div class="col">
+                    <h1>4017702</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="row justify-content-around">
+              <div class="col-2">
+                <img
+                  src="../../assets/imgs/Material.svg"
+                  style="width: 55px; opacity: 0.5"
+                />
+              </div>
+              <div class="col-8">
+                <h1>Material on Demand</h1>
+                <div class="row justify-content-around">
+                  <div class="col">
+                    <h1>ID</h1>
+                  </div>
+                  <div class="col">
+                    <h1>4017702</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="row justify-content-around">
+              <div class="col-2">
+                <img
+                  src="../../assets/imgs/Resources.svg"
+                  style="width: 55px; opacity: 0.5"
+                />
+              </div>
+              <div class="col-8">
+                <h1>Confirm mass on machine</h1>
+                <div class="row justify-content-around">
+                  <div class="col">
+                    <h1>ID</h1>
+                  </div>
+                  <div class="col">
+                    <h1>4017702</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="row justify-content-around">
+              <div class="col-2">
+                <img
+                  src="../../assets/imgs/machine.svg"
+                  style="width: 55px; opacity: 0.5"
+                />
+              </div>
+              <div class="col-8">
+                <h1>Machine Stoppage</h1>
+                <div class="row justify-content-around">
+                  <div class="col">
+                    <h1>ID</h1>
+                  </div>
+                  <div class="col">
+                    <h1>4017702</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="row justify-content-around">
+              <div class="col-2">
+                <img
+                  src="../../assets/imgs/pereformance.svg"
+                  style="width: 55px; opacity: 0.5"
+                />
+              </div>
+              <div class="col-8">
+                <h1>Low production yield count</h1>
+                <div class="row justify-content-around">
+                  <div class="col">
+                    <h1>ID</h1>
+                  </div>
+                  <div class="col">
+                    <h1>4017702</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="row justify-content-around">
+              <div class="col-2">
+                <img
+                  src="../../assets/imgs/pereformance.svg"
+                  style="width: 55px; opacity: 0.5"
+                />
+              </div>
+              <div class="col-8">
+                <h1>Low production yield count</h1>
+                <div class="row justify-content-around">
+                  <div class="col">
+                    <h1>ID</h1>
+                  </div>
+                  <div class="col">
+                    <h1>4017702</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <br />
+      <div class="row">
+        <mat-card class="example-card shadow mb-5 bg-white rounded">
+          <!-- <mat-card-header> -->
+          <div class="row justify-content-center">
+            <div class="col-2">
+              <span class="material-icons"> arrow_upward </span>
+              <span class="material-icons"> arrow_downward </span>
+            </div>
+            <div class="col-8 mt-1">
+              <mat-card-title
+                style="
+                  color: #003f5c;
+                  font: normal normal bold 14px/17px Montserrat;
+                "
+                >TOP 5 / LEAST 5</mat-card-title
+              >
+            </div>
+          </div>
+          <!-- </mat-card-header> -->
+          <mat-card-content
+            class="container-fluid"
+            style="overflow-y: scroll; max-height: 480px"
+          >
+            <hr />
+            <div class="row">
+              <div class="col-8">
+                <div class="row">
+                  <div class="col-2">
+                    <span class="material-icons mb-4" style="color: #ec5967">
+                      fiber_manual_record
+                    </span>
+                  </div>
+                  <div class="col">
+                    <div class="row">
+                      <div class="col-8">
+                        <h2 style="margin: 0">Material Name</h2>
+                        <h3 style="margin: 0">Material ID</h3>
+                        <h3 style="margin: 0">Scale ID</h3>
+                      </div>
+                      <div class="col-2">
+                        <h2 style="margin: 0">364787</h2>
+                        <h3 style="margin: 0">4256457</h3>
+                        <h3 style="margin: 0">4546</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-2">
+                    <span class="material-icons mb-4" style="color: #ec5967">
+                      fiber_manual_record
+                    </span>
+                  </div>
+                  <div class="col">
+                    <div class="row">
+                      <div class="col-8">
+                        <h2 style="margin: 0">Material Name</h2>
+                        <h3 style="margin: 0">Material ID</h3>
+                        <h3 style="margin: 0">Scale ID</h3>
+                      </div>
+                      <div class="col-2">
+                        <h2 style="margin: 0">364787</h2>
+                        <h3 style="margin: 0">4256457</h3>
+                        <h3 style="margin: 0">4546</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <span class="material-icons mb-4" style="color: #8e4f63">
+                      fiber_manual_record
+                    </span>
+                  </div>
+                  <div class="col">
+                    <div class="row">
+                      <div class="col-8">
+                        <h2 style="margin: 0">Material Name</h2>
+                        <h3 style="margin: 0">Material ID</h3>
+                        <h3 style="margin: 0">Scale ID</h3>
+                      </div>
+                      <div class="col-2">
+                        <h2 style="margin: 0">364787</h2>
+                        <h3 style="margin: 0">4256457</h3>
+                        <h3 style="margin: 0">4546</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <span class="material-icons mb-4" style="color: #8e4f63">
+                      fiber_manual_record
+                    </span>
+                  </div>
+                  <div class="col">
+                    <div class="row">
+                      <div class="col-8">
+                        <h2 style="margin: 0">Material Name</h2>
+                        <h3 style="margin: 0">Material ID</h3>
+                        <h3 style="margin: 0">Scale ID</h3>
+                      </div>
+                      <div class="col-2">
+                        <h2 style="margin: 0">364787</h2>
+                        <h3 style="margin: 0">4256457</h3>
+                        <h3 style="margin: 0">4546</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <span class="material-icons mb-4" style="color: #003f5c">
+                      fiber_manual_record
+                    </span>
+                  </div>
+                  <div class="col">
+                    <div class="row">
+                      <div class="col-8">
+                        <h2 style="margin: 0">Material Name</h2>
+                        <h3 style="margin: 0">Material ID</h3>
+                        <h3 style="margin: 0">Scale ID</h3>
+                      </div>
+                      <div class="col-2">
+                        <h2 style="margin: 0">364787</h2>
+                        <h3 style="margin: 0">4256457</h3>
+                        <h3 style="margin: 0">4546</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <span class="material-icons mb-4" style="color: #003f5c">
+                      fiber_manual_record
+                    </span>
+                  </div>
+                  <div class="col">
+                    <div class="row">
+                      <div class="col-8">
+                        <h2 style="margin: 0">Material Name</h2>
+                        <h3 style="margin: 0">Material ID</h3>
+                        <h3 style="margin: 0">Scale ID</h3>
+                      </div>
+                      <div class="col-2">
+                        <h2 style="margin: 0">364787</h2>
+                        <h3 style="margin: 0">4256457</h3>
+                        <h3 style="margin: 0">4546</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <span class="material-icons mb-4" style="color: #00637d">
+                      fiber_manual_record
+                    </span>
+                  </div>
+                  <div class="col">
+                    <div class="row">
+                      <div class="col-8">
+                        <h2 style="margin: 0">Material Name</h2>
+                        <h3 style="margin: 0">Material ID</h3>
+                        <h3 style="margin: 0">Scale ID</h3>
+                      </div>
+                      <div class="col-2">
+                        <h2 style="margin: 0">364787</h2>
+                        <h3 style="margin: 0">4256457</h3>
+                        <h3 style="margin: 0">4546</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <span class="material-icons mb-4" style="color: #00637d">
+                      fiber_manual_record
+                    </span>
+                  </div>
+                  <div class="col">
+                    <div class="row">
+                      <div class="col-8">
+                        <h2 style="margin: 0">Material Name</h2>
+                        <h3 style="margin: 0">Material ID</h3>
+                        <h3 style="margin: 0">Scale ID</h3>
+                      </div>
+                      <div class="col-2">
+                        <h2 style="margin: 0">364787</h2>
+                        <h3 style="margin: 0">4256457</h3>
+                        <h3 style="margin: 0">4546</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <span class="material-icons mb-4" style="color: #00a5b7">
+                      fiber_manual_record
+                    </span>
+                  </div>
+                  <div class="col">
+                    <div class="row">
+                      <div class="col-8">
+                        <h2 style="margin: 0">Material Name</h2>
+                        <h3 style="margin: 0">Material ID</h3>
+                        <h3 style="margin: 0">Scale ID</h3>
+                      </div>
+                      <div class="col-2">
+                        <h2 style="margin: 0">364787</h2>
+                        <h3 style="margin: 0">4256457</h3>
+                        <h3 style="margin: 0">4546</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <span class="material-icons mb-4" style="color: #00a5b7">
+                      fiber_manual_record
+                    </span>
+                  </div>
+                  <div class="col">
+                    <div class="row">
+                      <div class="col-8">
+                        <h2 style="margin: 0">Material Name</h2>
+                        <h3 style="margin: 0">Material ID</h3>
+                        <h3 style="margin: 0">Scale ID</h3>
+                      </div>
+                      <div class="col-2">
+                        <h2 style="margin: 0">364787</h2>
+                        <h3 style="margin: 0">4256457</h3>
+                        <h3 style="margin: 0">4546</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div id="chart">
+                  <apx-chart
+                    [series]="stackedBarChart.series"
+                    [chart]="stackedBarChart.chart"
+                    [dataLabels]="stackedBarChart.dataLabels"
+                    [plotOptions]="stackedBarChart.plotOptions"
+                    [yaxis]="stackedBarChart.yaxis"
+                    [legend]="stackedBarChart.legend"
+                    [fill]="stackedBarChart.fill"
+                    [stroke]="stackedBarChart.stroke"
+                    [tooltip]="stackedBarChart.tooltip"
+                    [xaxis]="stackedBarChart.xaxis"
+                    [grid]="stackedBarChart.grid"
+                    [colors]="stackedBarChart.colors"
+                  ></apx-chart>
+                </div>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

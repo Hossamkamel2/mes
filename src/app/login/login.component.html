@@ -1,0 +1,89 @@
+<div class="d-flex container-fluid" style="height: 100vh">
+  <div class="col-12 row">
+    <div
+      class="d-flex col-9 rounded"
+      style="
+        background-image: url('../assets/image/platform.png');
+        height: 100vh;
+        background-color: #0043d9;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 50% 70%;
+        background-position: 20% 50%;
+      "
+    >
+      <div class="content-wrapper" style="background-color: black">
+        <div class="overflow-container">
+          <div class="overflow-content">
+            <h1 class="write">one Plattform For Managing all</h1>
+            <h1 class="writed">Manufacturing Aspects</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex col-3 justify-content-center" style="height: 20vh">
+      <div
+        class="d-felx justify-content-around row"
+        style="position: relative; top: 200px; left: 50px"
+      >
+        <div class="col-2">
+          <img
+            class="rounded float-start"
+            style="width: 80px; height: 80px; object-fit: scale-down"
+            src="assets/image/factoryIcon.png"
+          />
+        </div>
+        <div
+          class="col-9 justify-content-end"
+          style="position: relative; left: 40px; top: 18px"
+        >
+          <h1 style="color: #2d62ed">MES</h1>
+        </div>
+      </div>
+      <div
+        class="col-9 ml-3"
+        style="position: relative; top: 700px; left: -50px"
+      >
+        <form [formGroup]="loginForm" (ngSubmit)="onRegister()">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              style="height: 60px"
+              type="text"
+              formControlName="email"
+              class="form-control rounded-pill"
+              aria-label="Sizing example input"
+              placeholder="email@domail.com"
+              aria-describedby="inputGroup-sizing-lg"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              style="height: 60px"
+              formControlName="password"
+              type="password"
+              class="form-control rounded-pill"
+              aria-label="Sizing example input"
+              placeholder="Password"
+              aria-describedby="inputGroup-sizing-lg"
+            />
+            <div
+              *ngIf="submitted && f.password.errors"
+              class="invalid-feedback"
+            >
+              <div *ngIf="f.password.errors.required">Password is required</div>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn btn-lg rounded-pill example-form col-12 mt-2"
+            style="background-color: #0043d9; color: white"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

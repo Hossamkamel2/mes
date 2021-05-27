@@ -1,0 +1,583 @@
+<div class="container-fluid">
+    <div class="row justify-content-around  mb-2" >
+      <div class="col-9 mt-4" id="btnToggle">
+        <button
+          mat-flat-button
+
+          class="text-muted   bt btn-outline-warning"
+          [matMenuTriggerFor]="menu"
+        >
+        <a style="font-size: 25px; ">
+          <i class="fa fa-building text-muted"></i>
+        </a>
+        </button>
+        <mat-menu #menu="matMenu">
+
+        </mat-menu>
+        <button
+          [matMenuTriggerFor]="menu2"
+          mat-flat-button
+          class="text-muted  bt btn-outline-warning"
+
+        >
+          <mat-icon  class="text-muted" style="font-size: 25px;"
+            >settings_input_component</mat-icon
+          >
+
+        </button>
+        <mat-menu #menu2="matMenu">
+        </mat-menu>
+        <button
+          [matMenuTriggerFor]="menu3"
+          mat-flat-button
+          class="text-muted bt  btn-outline-warning"
+
+        >
+        <a style="font-size: 25px;">
+          <i class="fa fa-rocket text-muted"></i>
+        </a>
+          <!-- <mat-icon >domain</mat-icon> -->
+        </button>
+        <mat-menu #menu3="matMenu">
+      </mat-menu>
+      </div>
+      <div class="col-3">
+        <div class="row mt-3">
+
+          <div class="col-3 mt-2">
+              <button mat-flat-button class="text-muted btn-outline-warning " checked>
+                  Today
+                </button>
+            </div>
+            <div class="col-3 mt-2">
+                <button mat-flat-button class="text-muted btn-outline-warning"   >
+                    Yesterday
+                  </button>
+              </div>
+              <div class="col-3 mt-2">
+                  <button mat-flat-button class="text-muted btn-outline-warning"  >
+                      Last Week
+                    </button>
+                </div>
+                <div class="col-3">
+                    <!-- <mat-form-field
+                    style="
+                    visibility: hidden;
+                    height: 0;
+                    width: 0;"
+                    class="example-full-width"
+                    appearance="fill"
+                  >
+                    <mat-label>Choose a date</mat-label>
+                    <mat-date-range-input  [formGroup]="range" [rangePicker]="picker">
+                      <input matStartDate formControlName="start" placeholder="Start date">
+                      <input matEndDate formControlName="end" placeholder="End date" >
+                    </mat-date-range-input>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker   #picker></mat-date-range-picker>
+
+                  </mat-form-field>
+   -->
+                    <mat-icon
+                    type="button"
+                    class="text-muted"
+                    style="font-size: 25px;"
+                    >today</mat-icon
+                  >
+                </div>
+
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <div
+  class="container-fluid"
+  style="background-color: rgb(235, 245, 235); padding-top: 50px; "
+>
+<div class="container-fluid">
+    <h2 style="color:#003f5c; font-weight: 500; font-family: 'Montserrat', sans-serif;">
+        Dashboard
+    </h2>
+</div>
+<div class="row justify-content-around">
+  <div class="col-8">
+    <div class="row justify-content-center">
+    <div class="col-3">
+        <mat-card class="example-card shadow p-3 mb-5 bg-white rounded" >
+          <mat-card-header>
+            <div class="row">
+              <div class="col-4">
+                <img src="../../assets/imgs/product.svg"/>
+              </div>
+              <div class="col-8 mt-1">
+                <mat-card-title
+                >Total Production</mat-card-title
+              >
+              </div>
+            </div>
+          </mat-card-header>
+
+            <mat-card-content>
+              <hr />
+              <div class="row justify-content-center">
+                  <div class="col-6">
+                      <h2>5,000 KM</h2>
+                      <span>Actual Production</span>
+                  </div>
+                  <div class="col-6">
+                    <h2>7,000 KM</h2>
+                    <span>Planned Production</span>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-8">
+                      <br>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div>
+                  <div class="col-4 mt-2">
+                      <h1>75%</h1>
+                  </div>
+              </div>
+
+            </mat-card-content>
+          </mat-card>
+    </div>
+    <div class="col-6">
+        <mat-card class="example-card shadow p-3 mb-5 bg-white rounded" style="height: 265px;" >
+          <mat-card-header>
+            <div class="row">
+              <div class="col-4">
+                <img src="../../assets/imgs/pereformance.svg"/>
+              </div>
+              <div class="col-8 mt-1">
+                <mat-card-title
+                >Performance Indicator KPI</mat-card-title
+              >
+              </div>
+            </div>
+          </mat-card-header>
+
+            <mat-card-content>
+              <hr />
+              <div class="row justify-content-center">
+                  <div class="col-4">
+                    <circle-progress
+                    [percent]="76"
+                    [radius]="50"
+                    [outerStrokeWidth]="10"
+                    [innerStrokeWidth]="0"
+                    [outerStrokeColor]="'#00D1DE'"
+                    [innerStrokeColor]="'#00D1DE'"
+                    [animation]="true"
+                    [animationDuration]="300"
+                  ></circle-progress>
+                      <h3 class="text-center">Avalabiltiy</h3>
+                  </div>
+                  <div class="col-4">
+                    <circle-progress
+                    [percent]="68"
+                    [radius]="50"
+                    [outerStrokeWidth]="10"
+                    [innerStrokeWidth]="0"
+                    [outerStrokeColor]="'#00D1DE'"
+                    [innerStrokeColor]="'#00D1DE'"
+                    [animation]="true"
+                    [animationDuration]="300"
+                  ></circle-progress>
+                  <h3 class="text-center">Performance</h3>
+                </div>
+                <div class="col-4">
+                    <circle-progress
+                    [percent]="25"
+                    [radius]="50"
+                    [outerStrokeWidth]="10"
+                    [innerStrokeWidth]="0"
+                    [outerStrokeColor]="'#EC5967'"
+                    [innerStrokeColor]="'#EC5967'"
+                    [animation]="true"
+                    [animationDuration]="300"
+                  ></circle-progress>
+                  <h3 class="text-center">Quality</h3>
+                </div>
+              </div>
+
+            </mat-card-content>
+          </mat-card>
+    </div>
+    <div class="col-3">
+      <mat-card class="example-card shadow p-3 mb-5 bg-white rounded"  >
+        <mat-card-header>
+          <div class="row">
+            <div class="col-4">
+              <img src="../../assets/imgs/Material.svg"/>
+            </div>
+            <div class="col-8 mt-1">
+              <mat-card-title
+              >Material Consumption</mat-card-title
+            >
+            </div>
+          </div>
+        </mat-card-header>
+
+        <mat-card-content>
+          <hr />
+          <div class="row justify-content-center">
+              <div class="col-6">
+                  <h2>5,000 KM</h2>
+                  <span>Actual Production</span>
+              </div>
+              <div class="col-6">
+                <h2>7,000 KM</h2>
+                <span>Planned Production</span>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+              <div class="col-8">
+                  <br>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+              </div>
+              <div class="col-4 mt-2">
+                  <h1>75%</h1>
+              </div>
+          </div>
+
+        </mat-card-content>
+      </mat-card>
+    </div>
+    </div>
+    <div class="row justify-content-center">
+    <div class="col-12">
+      <mat-card class="example-card shadow p-3 mb-5 bg-white rounded" style="height: 800px;">
+        <div class="row">
+          <div class="col-8">
+            <mat-card-header>
+              <div class="row">
+                <div class="col-4">
+                  <img src="../../assets/imgs/Activity.svg"/>
+                </div>
+                <div class="col-8 mt-1">
+                  <mat-card-title
+                  >Current Activity</mat-card-title
+                >
+                </div>
+              </div>
+            </mat-card-header>
+
+          </div>
+          <div class="col-4">
+            <mat-tab-group
+              mat-stretch-tabs
+              (selectedTabChange)="changeTab($event)"
+            >
+            <mat-tab label="In P|T"> </mat-tab>
+            <mat-tab label="Out P|T"> </mat-tab>
+            <mat-tab label="Oil P|T"> </mat-tab>
+            </mat-tab-group>
+          </div>
+        </div>
+        <mat-card-content>
+          <div
+            id="chart"
+            *ngIf="inChartRender == true && outChartRender == false && oilChartRender == false"
+          >
+          <apx-chart
+          [series]="inChart.series"
+          [chart]="inChart.chart"
+          [xaxis]="inChart.xaxis"
+          [stroke]="inChart.stroke"
+          [tooltip]="inChart.tooltip"
+          [dataLabels]="inChart.dataLabels"
+        ></apx-chart>
+          </div>
+          <div
+            id="chart"
+            *ngIf="inChartRender == false && outChartRender == true && oilChartRender == false"
+          >
+          <apx-chart
+          [series]="outChart.series"
+          [chart]="outChart.chart"
+          [xaxis]="outChart.xaxis"
+          [stroke]="outChart.stroke"
+          [tooltip]="outChart.tooltip"
+          [dataLabels]="outChart.dataLabels"
+        ></apx-chart>
+          </div>
+          <div
+            id="chart"
+            *ngIf="inChartRender == false && outChartRender == false && oilChartRender == true"
+          >
+          <apx-chart
+          [series]="oilChart.series"
+          [chart]="oilChart.chart"
+          [xaxis]="oilChart.xaxis"
+          [stroke]="oilChart.stroke"
+          [tooltip]="oilChart.tooltip"
+          [dataLabels]="oilChart.dataLabels"
+        ></apx-chart>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    </div>
+    </div>
+    <div class="col-4">
+      <div class="row">
+        <mat-card class="example-card shadow  bg-white rounded" >
+          <mat-card-header>
+            <div class="row">
+              <div class="col-4 ">
+                <span class="material-icons" style="color: red;">
+                  fiber_manual_record
+                  </span>
+              </div>
+              <div class="col-2 mt-1">
+                <mat-card-title style="color: red;"
+                > ALERTS</mat-card-title
+              >
+              </div>
+            </div>
+          </mat-card-header>
+          <mat-card-content class="container-fluid" style="overflow-y: scroll; max-height: 490px;" >
+            <hr />
+            <div class="row justify-content-around">
+              <div class="col-2">
+                <img src="../../assets/imgs/Resources.svg" style="width: 55px; opacity: 0.5;"/>
+              </div>
+              <div class="col-8">
+                <h1>Confirm mass on machine</h1>
+                <div class="row justify-content-around">
+                  <div class="col">
+                    <h1>ID</h1>
+                  </div>
+                  <div class="col">
+                    <h1>4017702</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row justify-content-around">
+              <div class="col-2">
+                <img src="../../assets/imgs/machine.svg" style="width: 55px; opacity: 0.5;"/>
+              </div>
+              <div class="col-8">
+                <h1>Machine Stoppage</h1>
+                <div class="row justify-content-around">
+                  <div class="col">
+                    <h1>ID</h1>
+                  </div>
+                  <div class="col">
+                    <h1>4017702</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row justify-content-around">
+              <div class="col-2">
+                <img src="../../assets/imgs/machine.svg" style="width: 55px; opacity: 0.5;"/>
+              </div>
+              <div class="col-8">
+                <h1>Machine Stoppage</h1>
+                <div class="row justify-content-around">
+                  <div class="col">
+                    <h1>ID</h1>
+                  </div>
+                  <div class="col">
+                    <h1>4017702</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row justify-content-around">
+              <div class="col-2">
+                <img src="../../assets/imgs/machine.svg" style="width: 55px; opacity: 0.5;"/>
+              </div>
+              <div class="col-8">
+                <h1>Machine Stoppage</h1>
+                <div class="row justify-content-around">
+                  <div class="col">
+                    <h1>ID</h1>
+                  </div>
+                  <div class="col">
+                    <h1>4017702</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row justify-content-around">
+              <div class="col-2">
+                <img src="../../assets/imgs/pereformance.svg" style="width: 55px; opacity: 0.5;"/>
+              </div>
+              <div class="col-8">
+                <h1>Low production yield count</h1>
+                <div class="row justify-content-around">
+                  <div class="col">
+                    <h1>ID</h1>
+                  </div>
+                  <div class="col">
+                    <h1>4017702</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row justify-content-around">
+              <div class="col-2">
+                <img src="../../assets/imgs/pereformance.svg" style="width: 55px; opacity: 0.5;"/>
+              </div>
+              <div class="col-8">
+                <h1>Low production yield count</h1>
+                <div class="row justify-content-around">
+                  <div class="col">
+                    <h1>ID</h1>
+                  </div>
+                  <div class="col">
+                    <h1>4017702</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="row">
+        <mat-card class="example-card shadow p-3 mb-5 bg-white rounded" >
+          <mat-card-header>
+            <div class="row">
+              <div class="col-4 ">
+                <span class="material-icons" style="color: skyblue;">
+                  fiber_manual_record
+                  </span>
+              </div>
+              <div class="col-2 mt-1">
+                <mat-card-title style="color: skyblue;"
+                > NOTIFICATION</mat-card-title
+              >
+              </div>
+            </div>
+          </mat-card-header>
+          <mat-card-content class="container-fluid" style="overflow-y: scroll; max-height: 490px;" >
+            <hr />
+            <div class="row justify-content-around">
+              <div class="col-2">
+                <span class="material-icons" style="font-size: 55px; color: rgb(168, 164, 164);">
+                  check_circle_outline
+                  </span>
+              </div>
+              <div class="col-8">
+                <h1>Job Order is Ready</h1>
+                <div class="row justify-content-around">
+                  <div class="col">
+                    <h1>ID</h1>
+                  </div>
+                  <div class="col">
+                    <h1>4017702</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row justify-content-around">
+              <div class="col-2">
+                <img src="../../assets/imgs/product.svg" style="width: 55px; opacity: 0.5;"/>
+              </div>
+              <div class="col-8">
+                <h1>High production scrap</h1>
+                <div class="row justify-content-around">
+                  <div class="col">
+                    <h1>ID</h1>
+                  </div>
+                  <div class="col">
+                    <h1>4017702</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row justify-content-around">
+              <div class="col-2">
+                <img src="../../assets/imgs/product.svg" style="width: 55px; opacity: 0.5;"/>
+              </div>
+              <div class="col-8">
+                <h1>High production scrap</h1>
+                <div class="row justify-content-around">
+                  <div class="col">
+                    <h1>ID</h1>
+                  </div>
+                  <div class="col">
+                    <h1>4017702</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row justify-content-around">
+              <div class="col-2">
+                <img src="../../assets/imgs/product.svg" style="width: 55px; opacity: 0.5;"/>
+              </div>
+              <div class="col-8">
+                <h1>High production scrap</h1>
+                <div class="row justify-content-around">
+                  <div class="col">
+                    <h1>ID</h1>
+                  </div>
+                  <div class="col">
+                    <h1>4017702</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row justify-content-around">
+              <div class="col-2">
+                <img src="../../assets/imgs/product.svg" style="width: 55px; opacity: 0.5;"/>
+              </div>
+              <div class="col-8">
+                <h1>High production scrap</h1>
+                <div class="row justify-content-around">
+                  <div class="col">
+                    <h1>ID</h1>
+                  </div>
+                  <div class="col">
+                    <h1>4017702</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row justify-content-around">
+              <div class="col-2">
+                <img src="../../assets/imgs/product.svg" style="width: 55px; opacity: 0.5;"/>
+              </div>
+              <div class="col-8">
+                <h1>High production scrap</h1>
+                <div class="row justify-content-around">
+                  <div class="col">
+                    <h1>ID</h1>
+                  </div>
+                  <div class="col">
+                    <h1>4017702</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+    </div>
+</div>
+
+  </div>

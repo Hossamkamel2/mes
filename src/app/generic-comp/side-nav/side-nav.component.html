@@ -1,0 +1,29 @@
+<mat-nav-list class="nav-list" style="margin-bottom: 250px;">
+
+    <i style="font-size: 30px; margin-bottom: 105px; margin-left: 80px; " class="routeIcon fa fa-industry" aria-hidden="true">	&nbsp;	&nbsp; <span style="font-family: 'Montserrat', sans-serif; font-weight: 500;">MES</span></i>
+    <app-menu-list-item
+      *ngFor="let item of navItems"
+      [item]="item"
+    ></app-menu-list-item>
+
+  </mat-nav-list>
+  <div class="row justify-content-center">
+    <div class="col-4" >
+      <mat-icon style="font-size: 40px; margin-bottom: 45px; margin-left: 55px;" class="routeIcon ml-4"
+      >settings &nbsp;	&nbsp; </mat-icon
+    >
+    </div>
+    <div class="col-8 mt-2">
+      <span  style="font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 20px;">Settings</span>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <a type="button">  <mat-icon (click)="logout()" style="font-size: 40px; margin-left: 55px;" class="routeIcon ml-4">logout &nbsp;	&nbsp; </mat-icon>
+      </a>
+    </div>
+    <div class="col-8 mt-2">
+      <span style="font-size: 20px;font-family: 'Montserrat', sans-serif; font-weight: 500;">Logout</span>
+    </div>
+
+  </div>
